@@ -16,4 +16,7 @@
     <string name="btn_multiple">*</string>
     <string name="btn_minus">-</string>
     <string name="btn_plus">+</string>
+    <string name="text_result">0</string>
+    <string name="tools_first_digit">First Digit</string>
+    <string name="first_digit">" "</string>
 </resources>
