@@ -8,7 +8,6 @@ import java.util.ArrayList;
  * @Author Zoer Aleksandr
  * Created 31.05.2021 1:11
  */
-
 // Что необходимо доделать
 // 1. Класс дженерик для сохранения результата ввода, тогда можно убрать 2/3 вычислительных методов
 // 2. Добавить еще один класс и вынести в него условия расчета
@@ -29,26 +28,30 @@ public class Calculator {
         Integer a = null;
         Integer b = null;
 
+        Double aDouble = null;
+        Double bDouble = null;
+
         if (!Action.aDot) {
             a = Integer.parseInt(digitList.get(0));
             b = Integer.parseInt(digitList.get(1));
-            System.out.println("a = " + a + " b = " + b);
+        }else {
+            aDouble = Double.parseDouble(digitList.get(0));
+            bDouble = Double.parseDouble(digitList.get(1));
         }
 
         clearList();
 
-        if (Action.summation) {
+        if (Action.operation == Operation.summation) {
             return plus(a, b).toString();
-        } else if (Action.subtraction) {
+        } else if (Action.operation == Operation.subtraction) {
             return minus(a, b).toString();
-        } else if (Action.multiplication) {
+        } else if (Action.operation == Operation.multiplication) {
             return multiple(a, b).toString();
-        } else if (Action.division) {
+        } else if (Action.operation == Operation.division) {
             return div(a, b).toString();
         } else
             return "0";
     }
-
 
     protected Integer plus(Integer a, Integer b) {
         if (a != null && b != null) {

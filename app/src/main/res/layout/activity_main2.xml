@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/text_first_digit"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
         app:layout_constraintStart_toStartOf="@id/text_result"
         tools:text="@string/tools_first_digit" />
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/text_result"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -43,198 +43,198 @@
         app:layout_constraintStart_toStartOf="@id/btn_2"
         tools:text="Result" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_1"
+        style="@style/MyStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin16"
         android:layout_marginEnd="@dimen/margin8"
         android:text="@string/btn_1"
-        android:textSize="@dimen/btn_text_size"
         app:layout_constraintBottom_toTopOf="@id/btn_4"
         app:layout_constraintEnd_toStartOf="@id/btn_2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_result" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_2"
+        style="@style/MyStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/margin8"
         android:text="@string/btn_2"
-        android:textSize="@dimen/btn_text_size"
         app:layout_constraintBottom_toTopOf="@id/btn_5"
         app:layout_constraintEnd_toStartOf="@id/btn_3"
         app:layout_constraintStart_toEndOf="@id/btn_1"
         app:layout_constraintTop_toBottomOf="@id/text_result" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_3"
+        style="@style/MyStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/margin8"
         android:text="@string/btn_3"
-        android:textSize="@dimen/btn_text_size"
         app:layout_constraintBottom_toTopOf="@id/btn_6"
         app:layout_constraintEnd_toStartOf="@id/btn_div"
         app:layout_constraintStart_toEndOf="@id/btn_2"
         app:layout_constraintTop_toBottomOf="@id/text_result" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_div"
+        style="@style/MyStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin16"
         android:layout_marginEnd="@dimen/margin16"
         android:text="@string/btn_div"
-        android:textSize="@dimen/btn_text_size"
         app:layout_constraintBottom_toTopOf="@id/btn_multiple"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/btn_3"
         app:layout_constraintTop_toBottomOf="@id/text_result" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_4"
+        style="@style/MyStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin16"
         android:layout_marginEnd="@dimen/margin8"
         android:text="@string/btn_4"
-        android:textSize="@dimen/btn_text_size"
         app:layout_constraintBottom_toTopOf="@id/btn_7"
         app:layout_constraintEnd_toStartOf="@id/btn_5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_result" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_5"
+        style="@style/MyStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/margin8"
         android:text="@string/btn_5"
-        android:textSize="@dimen/btn_text_size"
         app:layout_constraintEnd_toStartOf="@id/btn_6"
         app:layout_constraintStart_toEndOf="@id/btn_4"
         app:layout_constraintTop_toBottomOf="@id/btn_2" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_6"
+        style="@style/MyStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/margin8"
         android:text="@string/btn_6"
-        android:textSize="@dimen/btn_text_size"
         app:layout_constraintEnd_toStartOf="@id/btn_multiple"
         app:layout_constraintStart_toEndOf="@id/btn_5"
         app:layout_constraintTop_toBottomOf="@id/btn_3" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_multiple"
+        style="@style/MyStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin16"
         android:layout_marginEnd="@dimen/margin16"
         android:text="@string/btn_multiple"
-        android:textSize="@dimen/btn_text_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/btn_6"
         app:layout_constraintTop_toBottomOf="@id/btn_div" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_7"
+        style="@style/MyStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin16"
         android:layout_marginEnd="@dimen/margin8"
         android:text="@string/btn_7"
-        android:textSize="@dimen/btn_text_size"
         app:layout_constraintEnd_toStartOf="@id/btn_8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_4" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_8"
+        style="@style/MyStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/margin8"
         android:text="@string/btn_8"
-        android:textSize="@dimen/btn_text_size"
         app:layout_constraintEnd_toStartOf="@id/btn_9"
         app:layout_constraintStart_toEndOf="@id/btn_7"
         app:layout_constraintTop_toBottomOf="@id/btn_5" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_9"
+        style="@style/MyStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/margin8"
         android:text="@string/btn_9"
-        android:textSize="@dimen/btn_text_size"
         app:layout_constraintEnd_toStartOf="@id/btn_minus"
         app:layout_constraintStart_toEndOf="@id/btn_8"
         app:layout_constraintTop_toBottomOf="@id/btn_6" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_minus"
+        style="@style/MyStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin16"
         android:layout_marginEnd="@dimen/margin16"
         android:text="@string/btn_minus"
-        android:textSize="@dimen/btn_text_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/btn_9"
         app:layout_constraintTop_toBottomOf="@id/btn_multiple" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_dot"
+        style="@style/MyStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin16"
         android:layout_marginEnd="@dimen/margin8"
         android:layout_marginBottom="@dimen/margin16"
         android:text="@string/btn_dot"
-        android:textSize="@dimen/btn_text_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btn_0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_7" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_0"
+        style="@style/MyStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/margin8"
         android:layout_marginBottom="@dimen/margin16"
         android:text="@string/btn_0"
-        android:textSize="@dimen/btn_text_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btn_result"
         app:layout_constraintStart_toEndOf="@id/btn_dot"
         app:layout_constraintTop_toBottomOf="@id/btn_8" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_result"
+        style="@style/MyStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/margin8"
         android:layout_marginBottom="@dimen/margin16"
         android:text="@string/btn_res"
-        android:textSize="@dimen/btn_text_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btn_plus"
         app:layout_constraintStart_toEndOf="@id/btn_0"
         app:layout_constraintTop_toBottomOf="@id/btn_9" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_plus"
+        style="@style/MyStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin16"
         android:layout_marginEnd="@dimen/margin16"
         android:layout_marginBottom="@dimen/margin16"
         android:text="@string/btn_plus"
-        android:textSize="@dimen/btn_text_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/btn_result"
