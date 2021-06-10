@@ -16,6 +16,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_config"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/setting"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/message"
         android:layout_width="0dp"

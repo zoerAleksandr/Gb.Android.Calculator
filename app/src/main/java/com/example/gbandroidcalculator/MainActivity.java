@@ -1,11 +1,18 @@
 package com.example.gbandroidcalculator;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContract;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import static com.example.gbandroidcalculator.Operation.division;
 import static com.example.gbandroidcalculator.Operation.multiplication;
@@ -25,9 +32,29 @@ public class MainActivity extends AppCompatActivity {
 
         TextView message = findViewById(R.id.message);
 
-        if(getIntent() != null && getIntent().hasExtra("msg")){
+        if (getIntent() != null && getIntent().hasExtra("msg")) {
             message.setText(getIntent().getStringExtra("msg"));
         }
+
+        ActivityResultLauncher<Intent> launcher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
+            @Override
+            public void onActivityResult(ActivityResult result) {
+                if (result.getResultCode() == 0) {
+                    Toast.makeText(MainActivity.this, "selected dark theme", Toast.LENGTH_SHORT).show();
+                } else if (result.getResultCode() == 1) {
+                    Toast.makeText(MainActivity.this, "selected light theme", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        findViewById(R.id.btn_config).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentConfig = new Intent(MainActivity.this, ConfigActivity.class);
+//                startActivity(Intent.createChooser(intentConfig, null));
+                launcher.launch(intentConfig);
+            }
+        });
 
         tv_result = findViewById(R.id.text_result);
         tv_first_digit = findViewById(R.id.text_first_digit);
