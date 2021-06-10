@@ -11,14 +11,15 @@ import android.content.Context;
  */
 public class Action {
 
-    static boolean summation, subtraction, multiplication, division, aDot;
+    static boolean action, aDot;
 
+    static Operation operation;
 
     protected static String getSymbol(){
-        if(summation) return "+";
-        else if (subtraction) return "-";
-        else if (multiplication) return "*";
-        else if (division) return "/";
+        if(operation == Operation.summation) return "+";
+        else if (operation == Operation.subtraction) return "-";
+        else if (operation == Operation.multiplication) return "*";
+        else if (operation == Operation.division) return "/";
         else return "";
     }
 }

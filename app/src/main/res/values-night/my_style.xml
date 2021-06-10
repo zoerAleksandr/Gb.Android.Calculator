@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MyStyle">
+        <!-- Эти параметры не сработали. Почему? -->
+        <!--        <item name="android:layout_weight">0dp</item>-->
+        <!--        <item name="android:layout_height">wrap_content</item>-->
+        <!--        <item name="android:layout_marginEnd">4dp</item>-->
+        <item name="android:textSize">@dimen/btn_text_size</item>
+        <item name="android:backgroundTint">@color/black</item>
+        <item name="android:textColor">@color/purple_200</item>
+    </style>
+</resources>
