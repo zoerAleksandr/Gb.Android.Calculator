@@ -6,4 +6,5 @@
     <dimen name="btn_text_size_land">30sp</dimen>
     <dimen name="first_digit_size">30sp</dimen>
     <dimen name="first_digit_size_land">20sp</dimen>
+    <dimen name="text_size_delete">20sp</dimen>
 </resources>

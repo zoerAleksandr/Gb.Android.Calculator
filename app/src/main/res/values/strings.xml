@@ -10,7 +10,7 @@
     <string name="btn_8">8</string>
     <string name="btn_9">9</string>
     <string name="btn_0">0</string>
-    <string name="btn_dot">,</string>
+    <string name="btn_dot">.</string>
     <string name="btn_res">=</string>
     <string name="btn_div">/</string>
     <string name="btn_multiple">*</string>
@@ -19,4 +19,8 @@
     <string name="text_result">0</string>
     <string name="tools_first_digit">First Digit</string>
     <string name="first_digit">" "</string>
+    <string name="del">del</string>
+    <string name="tools_text_result">Result</string>
+    <string name="clear">C</string>
+    <string name="text_from_other_app">text from other app</string>
 </resources>

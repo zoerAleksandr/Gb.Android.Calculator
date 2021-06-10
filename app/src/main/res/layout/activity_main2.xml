@@ -17,6 +17,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/text_first_digit"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="@string/text_from_other_app" />
+
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/text_first_digit"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -38,10 +47,35 @@
         android:textAlignment="textEnd"
         android:textColor="@color/black"
         android:textSize="@dimen/btn_text_size"
-        app:layout_constraintBottom_toTopOf="@id/btn_3"
+        app:layout_constraintBottom_toTopOf="@id/btn_delete"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/btn_2"
-        tools:text="Result" />
+        tools:text="@string/tools_text_result" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_clear"
+        style="@style/MyStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/clear"
+        android:textSize="@dimen/text_size_delete"
+        app:layout_constraintBottom_toBottomOf="@id/btn_delete"
+        app:layout_constraintEnd_toEndOf="@id/btn_3"
+        app:layout_constraintStart_toStartOf="@id/btn_3"
+        app:layout_constraintTop_toTopOf="@id/btn_delete" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_delete"
+        style="@style/MyStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin16"
+        android:layout_marginEnd="@dimen/margin16"
+        android:text="@string/del"
+        android:textSize="@dimen/text_size_delete"
+        app:layout_constraintBottom_toTopOf="@id/btn_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_3" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_1"
@@ -54,7 +88,7 @@
         app:layout_constraintBottom_toTopOf="@id/btn_4"
         app:layout_constraintEnd_toStartOf="@id/btn_2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_result" />
+        app:layout_constraintTop_toTopOf="@id/btn_2" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_2"
@@ -63,10 +97,10 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/margin8"
         android:text="@string/btn_2"
-        app:layout_constraintBottom_toTopOf="@id/btn_5"
+        app:layout_constraintBottom_toBottomOf="@id/btn_3"
         app:layout_constraintEnd_toStartOf="@id/btn_3"
         app:layout_constraintStart_toEndOf="@id/btn_1"
-        app:layout_constraintTop_toBottomOf="@id/text_result" />
+        app:layout_constraintTop_toTopOf="@id/btn_3" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_3"
@@ -78,7 +112,7 @@
         app:layout_constraintBottom_toTopOf="@id/btn_6"
         app:layout_constraintEnd_toStartOf="@id/btn_div"
         app:layout_constraintStart_toEndOf="@id/btn_2"
-        app:layout_constraintTop_toBottomOf="@id/text_result" />
+        app:layout_constraintTop_toTopOf="@id/btn_div" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_div"
@@ -91,7 +125,7 @@
         app:layout_constraintBottom_toTopOf="@id/btn_multiple"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/btn_3"
-        app:layout_constraintTop_toBottomOf="@id/text_result" />
+        app:layout_constraintTop_toBottomOf="@id/btn_delete" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_4"
@@ -113,9 +147,10 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/margin8"
         android:text="@string/btn_5"
+        app:layout_constraintBottom_toBottomOf="@id/btn_6"
         app:layout_constraintEnd_toStartOf="@id/btn_6"
         app:layout_constraintStart_toEndOf="@id/btn_4"
-        app:layout_constraintTop_toBottomOf="@id/btn_2" />
+        app:layout_constraintTop_toTopOf="@id/btn_6" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_6"
@@ -124,6 +159,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/margin8"
         android:text="@string/btn_6"
+        app:layout_constraintBottom_toBottomOf="@id/btn_multiple"
         app:layout_constraintEnd_toStartOf="@id/btn_multiple"
         app:layout_constraintStart_toEndOf="@id/btn_5"
         app:layout_constraintTop_toBottomOf="@id/btn_3" />
@@ -136,6 +172,7 @@
         android:layout_marginStart="@dimen/margin16"
         android:layout_marginEnd="@dimen/margin16"
         android:text="@string/btn_multiple"
+        app:layout_constraintBottom_toTopOf="@id/btn_minus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/btn_6"
         app:layout_constraintTop_toBottomOf="@id/btn_div" />
@@ -159,9 +196,10 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/margin8"
         android:text="@string/btn_8"
+        app:layout_constraintBottom_toBottomOf="@id/btn_9"
         app:layout_constraintEnd_toStartOf="@id/btn_9"
         app:layout_constraintStart_toEndOf="@id/btn_7"
-        app:layout_constraintTop_toBottomOf="@id/btn_5" />
+        app:layout_constraintTop_toTopOf="@id/btn_9" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_9"
@@ -182,9 +220,10 @@
         android:layout_marginStart="@dimen/margin16"
         android:layout_marginEnd="@dimen/margin16"
         android:text="@string/btn_minus"
+        app:layout_constraintBottom_toTopOf="@id/btn_plus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/btn_9"
-        app:layout_constraintTop_toBottomOf="@id/btn_multiple" />
+        app:layout_constraintTop_toTopOf="@id/btn_9" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_dot"
@@ -211,7 +250,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btn_result"
         app:layout_constraintStart_toEndOf="@id/btn_dot"
-        app:layout_constraintTop_toBottomOf="@id/btn_8" />
+        app:layout_constraintTop_toTopOf="@id/btn_result" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_result"
